@@ -21,7 +21,6 @@
 
 ## 🔖 Sobre
 
-Curso de programação para apoio da disciplina Trabalho Interdisciplinar Aplicações para Processos de Negócios do 2º período de Engenharia de Software, PucMinas Praça da Liberdade 2022/2.
 
 Neste curso é abordado como criar uma API Restful utilizando o framework Spring Boot da linguagem Java.
 Conteúdo inclui vídeo aulas de explicações teóricas, instalação de ferramentas, prática focada no código e como consumir a API pelo Postman. Além disso, é apresentado como criar uma simples interface web em HTML, CSS e JavaScript (também com a biblioteca Booststrap) que consume esta API.
@@ -32,13 +31,13 @@ Esta é uma simples aplicação onde usuário podem se cadastrar e registrarem t
 
 ## 👨‍💻 Monitor
 
-* [Lucas Ângelo Oliveira Martins Rocha](https://lucasangelo.com)
+* [Joao Guedes]
 
 ---
 
 ## 👩‍🏫 Professor responsável
 
-* Hugo Bastos De Paula
+* Joao Guedes
 
 ---
 
@@ -77,7 +76,7 @@ Pré-requisitos:
 
 - Passo 1: Clonar o repositório:
   ```bash
-  $ git clone https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2022-2-MON-CursoAPIJava.git
+  $ git clone https://github.com/jgbcientista/backend-java17-token.git
   ```
 
 <br>
@@ -86,7 +85,7 @@ Pré-requisitos:
 
   - Passo 2.1: Entrar no arquivo application.properties:
   ```bash
-  $ vi PLF-ES-2022-2-MON-CursoAPIJava\src\main\resources\application-dev.properties
+  $ vi backend-java17-token\src\main\resources\application-dev.properties
   ```
 
   - Passo 2.2: Configurar as credenciais de banco de dados de acordo com sua instalação do MySQL Server:
@@ -99,7 +98,7 @@ Pré-requisitos:
 
   - Passo 2.3: Voltar para a pasta raíz do projeto:
   ```bash
-  $ cd PLF-ES-2022-2-MON-CursoAPIJava\
+  $ cd backend-java17-token\
   ```
 
   - Passo 2.4: Iniciar a aplicação Spring Boot:
@@ -127,12 +126,12 @@ Pré-requisitos:
 
   - Passo 3.1: Entrar na pasta raíz do projeto:
   ```bash
-  $ cd PLF-ES-2022-2-MON-CursoAPIJava\
+  $ cd backend-java17-token\
   ```
 
   - Passo 3.2: Abrir o arquivo index.html diretamente ou pela extensão Live Server do VsCode:
   ```bash
-  $ cd PLF-ES-2022-2-MON-CursoAPIJava\view\login.html
+  $ cd backend-java17-token\view\login.html
   ```
 
   - Frontend estará rodando em http://127.0.0.1:5500/view/login.html caso iniciado com Live Server.
