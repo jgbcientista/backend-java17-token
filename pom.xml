@@ -10,8 +10,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>br.com.joaoguedes</groupId>
-	<artifactId>joaoguedes</artifactId>
+	<groupId>br.com.joaoguedesapp</groupId>
+	<artifactId>joaoguedesapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Joao</name>
 	<description>Spring Boot API for To Do App</description>
@@ -26,7 +26,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>todosimpleapp</finalName>
+		<finalName>joaoguedesapp</finalName>
 	</build>
 	<dependencies>
 

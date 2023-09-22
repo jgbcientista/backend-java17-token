@@ -1,18 +1,17 @@
 cff-version: 1.2.0
-title: Curso de monitoria ensinando a criar uma API RESTful com Spring Boot
+title: criar uma API RESTful com Spring Boot
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
 authors:
-  - given-names: Lucas
-    family-names: Ângelo Oliveira Martins Rocha
+  - given-names: JOAO
+    family-names: JOAO GUEDES
   - name-suffix: Professor
-    given-names: Hugo
-    family-names: Bastos De Paula
-    affiliation: PUC Minas
+    given-names: JOAO
+    family-names: GUEDES
 repository-code: >-
-  https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2022-2-MON-CursoAPIJava
+  https://github.com/jgbcientista/backend-java17-token
 keywords:
   - spring boot
   - monitoria
