@@ -5,8 +5,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -22,6 +20,7 @@ import br.com.joaoguedes.security.UserSpringSecurity;
 import br.com.joaoguedes.services.exceptions.AuthorizationException;
 import br.com.joaoguedes.services.exceptions.DataBindingViolationException;
 import br.com.joaoguedes.services.exceptions.ObjectNotFoundException;
+import jakarta.validation.Valid;
 
 @Service
 public class UserService {

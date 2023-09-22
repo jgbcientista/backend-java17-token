@@ -3,8 +3,6 @@ package br.com.joaoguedes.controllers;
 import java.net.URI;
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -21,6 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import br.com.joaoguedes.models.Task;
 import br.com.joaoguedes.models.projection.TaskProjection;
 import br.com.joaoguedes.services.TaskService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/task")

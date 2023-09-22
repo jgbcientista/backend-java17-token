@@ -2,8 +2,6 @@ package br.com.joaoguedes.controllers;
 
 import java.net.URI;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -21,6 +19,7 @@ import br.com.joaoguedes.models.User;
 import br.com.joaoguedes.models.dto.UserCreateDTO;
 import br.com.joaoguedes.models.dto.UserUpdateDTO;
 import br.com.joaoguedes.services.UserService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/user")
