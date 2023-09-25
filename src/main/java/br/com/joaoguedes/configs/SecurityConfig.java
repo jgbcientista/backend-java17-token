@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -24,7 +23,6 @@ import br.com.joaoguedes.security.JWTUtil;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
         private AuthenticationManager authenticationManager;
@@ -35,14 +33,6 @@ public class SecurityConfig {
         @Autowired
         private JWTUtil jwtUtil;
 
-        private static final String[] PUBLIC_MATCHERS = {
-                        "/"
-        };
-        private static final String[] PUBLIC_MATCHERS_POST = {
-                        "/user",
-                        "/login"
-        };
-
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
@@ -50,18 +40,17 @@ public class SecurityConfig {
 
                 AuthenticationManagerBuilder authenticationManagerBuilder = http
                                 .getSharedObject(AuthenticationManagerBuilder.class);
-                authenticationManagerBuilder.userDetailsService(this.userDetailsService)
-                                .passwordEncoder(bCryptPasswordEncoder());
+                
+                http.authorizeHttpRequests()
+                .requestMatchers("/user/**").permitAll() // nao precisa de token
+                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**").permitAll();
+                
+                authenticationManagerBuilder.userDetailsService(this.userDetailsService).passwordEncoder(bCryptPasswordEncoder());
                 this.authenticationManager = authenticationManagerBuilder.build();
-
-                http.authorizeRequests()
-                                .anyRequest().authenticated().and()
+                http.authorizeHttpRequests().anyRequest().authenticated().and()
                                 .authenticationManager(authenticationManager);
-
                 http.addFilter(new JWTAuthenticationFilter(this.authenticationManager, this.jwtUtil));
-                http.addFilter(new JWTAuthorizationFilter(this.authenticationManager, this.jwtUtil,
-                                this.userDetailsService));
-
+                http.addFilter(new JWTAuthorizationFilter(this.authenticationManager, this.jwtUtil, this.userDetailsService));
                 http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
                 return http.build();

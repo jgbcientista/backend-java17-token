@@ -12,7 +12,7 @@
 	
 	<groupId>br.com.joaoguedesapp</groupId>
 	
-	<artifactId>joaoguedesapp</artifactId>
+	<artifactId>joaoguedes-api</artifactId>
 	
 	<version>0.0.1-SNAPSHOT</version>
 	
